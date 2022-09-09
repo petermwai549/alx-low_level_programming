@@ -5,8 +5,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	char  i;
-	
+    char  i;	
     for(i ='a'; i <= 'z'; i++)
       putchar(tolower(i));    
     putchar('\n');    
