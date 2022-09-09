@@ -1,16 +1,17 @@
 #include <stdio.h>
+/* more headers goes there */
 
-/**
-   * main - print alphabet in lowercase
-   *
-   *Return: zero
-   */
+/* betty style doc for function main goes there */
 int main(void)
 {
-	char ch = 'a';
-
-	for (ch = 'a'; ch <= 'z'; ch++)
-		putchar(ch);
-		putchar('\n);
+	char  i;
+	
+    for(i ='A'; i <= 'Z'; i++)
+    {
+        putchar(i);
+        putchar('\n');
+    }
+        
 	return (0);
+	
 }
