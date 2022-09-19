@@ -34,7 +34,7 @@ void puts_half(char *str)
   */
 int string_length(char *pointer)
 {
-	int c = 1;
+	int c = 0;
 
 	while (*(pointer + c) != '\0')
 	{
