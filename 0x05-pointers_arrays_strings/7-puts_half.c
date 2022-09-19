@@ -34,11 +34,11 @@ void puts_half(char *str)
   */
 int string_length(char *pointer)
 {
-	int c = 0;
+	int c = 1;
 
 	while (*(pointer + c) != '\0')
 	{
 		c++;
 	}
 	return (c);
-}
+}i
