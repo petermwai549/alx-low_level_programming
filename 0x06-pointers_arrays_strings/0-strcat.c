@@ -1,37 +1,32 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * *_strcat - concatenates two strings.
+ * cap_string - capitalizes all words in a string
+ * @s: string to capitalize
  *
- * @dest: resulting string.
- * @src: source string.
- * Return: pointer to dest
+ * Return: address of s
  */
-char *_strcat(char *dest, char *src)
+char *cap_string(char *s)
 {
-	int i, n;
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	n = string_length(dest);
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	while (*(s + i))
 	{
-		dest[n + i] = src[i];
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+		{
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
+			}
+		}
+		i++;
 	}
-	dest[n + i] = '\0';
-	return (dest);
-}
-
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
+	return (s);
 }
